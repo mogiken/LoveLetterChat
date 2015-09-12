@@ -2,6 +2,7 @@ package com.gashfara.lovechat.ui;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.List;
 
 import com.kii.cloud.abtesting.KiiExperiment;
@@ -37,6 +38,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +48,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 
 /**
  * メッセージの送受信を行うチャット画面です。
@@ -145,12 +154,39 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 		this.btnSend.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// 入力されたメッセージをバックグラウンドでKiiCloudに保存する
 				btnSend.setEnabled(false);
-				final ChatMessage message = new ChatMessage(kiiGroup);
-				message.setMessage(editMessage.getText().toString());
-				message.setSenderUri(KiiUser.getCurrentUser().toUri().toString());
-				new SendMessageTask(message).execute();
+				//感情APIを実行する。mogi
+				new Thread(new Runnable() {
+					@Override
+					public void run() {
+						try {
+							HttpClient httpClient = new DefaultHttpClient();
+							//感情APIを実行
+							HttpGet httpGet = new HttpGet("http://ap.mextractr.net/ma9/emotion_analyzer?apikey=7A78318F52FE56AAC4E808507BFB225406872FAE&out=json&text="+ URLEncoder.encode(editMessage.getText().toString(), "UTF-8"));
+							HttpResponse httpResponse = httpClient.execute(httpGet);
+							String str = EntityUtils.toString(httpResponse.getEntity(), "UTF-8");
+							JSONObject myJson =  new JSONObject(str);//Jsonに変換
+							String emotion = "likedislike:" + myJson.getString("likedislike") + ",joysad:" + myJson.getString("joysad")+",angerfear:" + myJson.getString("angerfear");
+							Log.d("HTTP", emotion +" json=" +str);
+							// 入力されたメッセージをバックグラウンドでKiiCloudに保存する
+							final ChatMessage message = new ChatMessage(kiiGroup);
+							message.setMessage(editMessage.getText().toString());
+							message.setSenderUri(KiiUser.getCurrentUser().toUri().toString());
+							message.setEmotion(emotion);
+							new SendMessageTask(message).execute();
+
+						} catch(Exception ex) {
+							System.out.println(ex);
+						}
+					}
+				}).start();
+
+				// 入力されたメッセージをバックグラウンドでKiiCloudに保存する
+				//final ChatMessage message = new ChatMessage(kiiGroup);
+				//message.setMessage(editMessage.getText().toString());
+				//message.setSenderUri(KiiUser.getCurrentUser().toUri().toString());
+				//new SendMessageTask(message).execute();
+
 			}
 		});
 	}
@@ -286,8 +322,11 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 				ChatStamp stamp = new ChatStamp(chatMessage);
 				imageFetcher.fetchStamp(stamp, holder.stamp);
 			} else {
-				// テキストメッセージを表示する
+				// テキストメッセージを表示する.感情付き
 				String message = chatMessage.getMessage() == null ? "" : chatMessage.getMessage();
+				String emotion = chatMessage.getEmotion() == null ? "" : chatMessage.getEmotion();
+				//相手の時だけ感情を表示
+				if(getRowType(chatMessage) == ROW_FRIEND_MESSAGE){message += " "+emotion;}
 				holder.message.setText(message);
 			}
 			return convertView;

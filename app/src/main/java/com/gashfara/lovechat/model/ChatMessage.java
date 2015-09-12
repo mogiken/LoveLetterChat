@@ -20,7 +20,8 @@ public class ChatMessage extends KiiObjectWrapper {
 	private static final String FIELD_MESSAGE = "message";
 	private static final String FIELD_SENDER_URI = "sender_uri";
 	private static final String PREFIX_STAMP = "$STAMP:";
-	
+	private static final String FIELD_EMOTION = "emotion";
+
 	/**
 	 * 指定されたスタンプを表すChatMessageオブジェクトを作成します。
 	 * 
@@ -81,6 +82,13 @@ public class ChatMessage extends KiiObjectWrapper {
 	}
 	public void setMessage(String message) {
 		set(FIELD_MESSAGE, message);
+	}
+	/**
+	 * メッセージの感情を取得します。
+	 */
+	public String getEmotion() {return getString(FIELD_EMOTION);}
+	public void setEmotion(String emotion) {
+		set(FIELD_EMOTION, emotion);
 	}
 	/**
 	 * メッセージの送信者のURIを取得します。
