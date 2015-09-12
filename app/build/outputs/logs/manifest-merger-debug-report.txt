@@ -1,0 +1,168 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	package
+		ADDED from AndroidManifest.xml:4:2
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:6:2
+	xmlns:tools
+		ADDED from AndroidManifest.xml:3:2
+	android:versionCode
+		ADDED from AndroidManifest.xml:5:2
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+uses-sdk
+ADDED from AndroidManifest.xml:7:2
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:appcompat-v7:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.example.library:android-cloud-sdk-v2.2.1::7:5
+	tools:overrideLibrary
+		ADDED from AndroidManifest.xml:7:68
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:7:12
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:7:42
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.VIBRATE
+ADDED from AndroidManifest.xml:10:2
+	android:name
+		ADDED from AndroidManifest.xml:10:19
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:13:2
+	android:name
+		ADDED from AndroidManifest.xml:13:19
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:14:2
+	android:name
+		ADDED from AndroidManifest.xml:14:19
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from AndroidManifest.xml:17:2
+	android:name
+		ADDED from AndroidManifest.xml:17:19
+uses-permission#android.permission.WAKE_LOCK
+ADDED from AndroidManifest.xml:18:2
+	android:name
+		ADDED from AndroidManifest.xml:18:19
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:19:2
+	android:name
+		ADDED from AndroidManifest.xml:19:19
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from AndroidManifest.xml:20:2
+	android:name
+		ADDED from AndroidManifest.xml:20:19
+uses-permission#com.gashfara.lovechat.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:21:2
+	android:name
+		ADDED from AndroidManifest.xml:21:19
+permission#com.gashfara.lovechat.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:22:2
+	android:protectionLevel
+		ADDED from AndroidManifest.xml:22:74
+	android:name
+		ADDED from AndroidManifest.xml:22:14
+application
+ADDED from AndroidManifest.xml:25:2
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:appcompat-v7:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+	android:label
+		ADDED from AndroidManifest.xml:30:3
+	android:allowBackup
+		ADDED from AndroidManifest.xml:28:3
+	android:icon
+		ADDED from AndroidManifest.xml:29:3
+	android:theme
+		ADDED from AndroidManifest.xml:27:3
+	android:name
+		ADDED from AndroidManifest.xml:26:3
+activity#com.gashfara.lovechat.ui.MainActivity
+ADDED from AndroidManifest.xml:31:3
+	android:label
+		ADDED from AndroidManifest.xml:33:4
+	android:name
+		ADDED from AndroidManifest.xml:32:4
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:34:4
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:35:5
+	android:name
+		ADDED from AndroidManifest.xml:35:13
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:36:5
+	android:name
+		ADDED from AndroidManifest.xml:36:15
+activity#com.gashfara.lovechat.ui.SigninActivity
+ADDED from AndroidManifest.xml:39:3
+	android:label
+		ADDED from AndroidManifest.xml:41:4
+	android:launchMode
+		ADDED from AndroidManifest.xml:42:4
+	android:configChanges
+		ADDED from AndroidManifest.xml:43:4
+	android:name
+		ADDED from AndroidManifest.xml:40:4
+activity#com.gashfara.lovechat.ui.ChatMainActivity
+ADDED from AndroidManifest.xml:44:3
+	android:label
+		ADDED from AndroidManifest.xml:46:4
+	android:launchMode
+		ADDED from AndroidManifest.xml:47:4
+	android:configChanges
+		ADDED from AndroidManifest.xml:48:4
+	android:name
+		ADDED from AndroidManifest.xml:45:4
+activity#com.gashfara.lovechat.ui.AddFriendActivity
+ADDED from AndroidManifest.xml:49:3
+	android:label
+		ADDED from AndroidManifest.xml:51:4
+	android:launchMode
+		ADDED from AndroidManifest.xml:52:4
+	android:configChanges
+		ADDED from AndroidManifest.xml:53:4
+	android:name
+		ADDED from AndroidManifest.xml:50:4
+activity#com.gashfara.lovechat.ui.ChatActivity
+ADDED from AndroidManifest.xml:54:3
+	android:label
+		ADDED from AndroidManifest.xml:56:4
+	android:launchMode
+		ADDED from AndroidManifest.xml:57:4
+	android:configChanges
+		ADDED from AndroidManifest.xml:58:4
+	android:name
+		ADDED from AndroidManifest.xml:55:4
+activity#com.kii.cloud.storage.social.connector.KiiSocialNetworkConnectorLoginActivity
+ADDED from AndroidManifest.xml:59:3
+	android:label
+		ADDED from AndroidManifest.xml:61:4
+	android:name
+		ADDED from AndroidManifest.xml:60:4
+receiver#com.gashfara.lovechat.GCMPushReceiver
+ADDED from AndroidManifest.xml:63:3
+	android:permission
+		ADDED from AndroidManifest.xml:65:4
+	android:name
+		ADDED from AndroidManifest.xml:64:4
+intent-filter#com.gashfara.lovechat+com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:66:4
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:67:5
+	android:name
+		ADDED from AndroidManifest.xml:67:13
+category#com.gashfara.lovechat
+ADDED from AndroidManifest.xml:68:5
+	android:name
+		ADDED from AndroidManifest.xml:68:15
+service#com.kii.cloud.analytics.EventUploadService
+ADDED from AndroidManifest.xml:72:3
+	android:name
+		ADDED from AndroidManifest.xml:72:12

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/src/main/res/values-v14/style.xml -->
+    <eat-comment/>
+    <style name="ActionBar.Solid.Appcompatdark" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_appcompatdark</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_appcompatdark</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_appcompatdark</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Appcompatdark</item>
+    </style>
+    <style name="ActionBar.Transparent.Appcompatdark" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_appcompatdark</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Appcompatdark</item>
+    </style>
+    <!-- From: file:/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v14/values.xml -->
+    <eat-comment/>
+    <style name="Base.Theme.AppCompat" parent="Base.V14.Theme.AppCompat">
+        <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
+        <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
+        <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
+        <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
+        <item name="android:actionModeShareDrawable">?actionModeShareDrawable</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Dialog" parent="Base.V14.Theme.AppCompat.Dialog">
+        <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
+        <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
+        <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
+        <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
+        <item name="android:actionModeShareDrawable">?actionModeShareDrawable</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="Base.V14.Theme.AppCompat.Light">
+        <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
+        <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
+        <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
+        <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
+        <item name="android:actionModeShareDrawable">?actionModeShareDrawable</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Light.Dialog" parent="Base.V14.Theme.AppCompat.Light.Dialog">
+        <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
+        <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
+        <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
+        <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
+        <item name="android:actionModeShareDrawable">?actionModeShareDrawable</item>
+    </style>
+    <style name="Base.V14.Theme.AppCompat" parent="Base.V11.Theme.AppCompat"/>
+    <style name="Base.V14.Theme.AppCompat.Dialog" parent="Base.V11.Theme.AppCompat.Dialog"/>
+    <style name="Base.V14.Theme.AppCompat.Light" parent="Base.V11.Theme.AppCompat.Light"/>
+    <style name="Base.V14.Theme.AppCompat.Light.Dialog" parent="Base.V11.Theme.AppCompat.Light.Dialog"/>
+    <!-- From: file:/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/src/main/res/values-v14/style.xml -->
+    <eat-comment/>
+    <style name="Theme.Appcompatdark" parent="@style/Theme.AppCompat">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_appcompatdark</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Appcompatdark</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Appcompatdark</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Appcompatdark</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Appcompatdark</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Appcompatdark</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_appcompatdark</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_appcompatdark</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Appcompatdark</item>
+    </style>
+    <style name="Theme.Appcompatdark.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Appcompatdark</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Appcompatdark</item>
+    </style>
+</resources>

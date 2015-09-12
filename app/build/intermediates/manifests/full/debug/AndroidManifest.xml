@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kii.sample.chat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <!-- 以下のパーミッションはメッセージ受信時に携帯をバイブさせるのに必要です。 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 以下のパーミッションはKiiSDKを利用するのに必要です。 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 以下のパーミッションはプッシュ機能を利用するのに必要です。 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.gashfara.lovechat.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.gashfara.lovechat.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- テーマは http://jgilfelt.github.io/android-actionbarstylegenerator/ て生成したものを使用しています。 -->
+    <application
+        android:name="com.gashfara.lovechat.KiiChatApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Appcompatdark" >
+        <activity
+            android:name="com.gashfara.lovechat.ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gashfara.lovechat.ui.SigninActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.gashfara.lovechat.ui.ChatMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.gashfara.lovechat.ui.AddFriendActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.gashfara.lovechat.ui.ChatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.kii.cloud.storage.social.connector.KiiSocialNetworkConnectorLoginActivity"
+            android:label="@string/app_name" />
+        <!-- 以下はプッシュ通知を受け取る為のレシーバーの設定です。 -->
+        <receiver
+            android:name="com.gashfara.lovechat.GCMPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.gashfara.lovechat" />
+            </intent-filter>
+        </receiver>
+        <!-- 以下はKii AnalyticsがイベントデータをKiiCloudにアップロードする為のサービスです。 -->
+        <service android:name="com.kii.cloud.analytics.EventUploadService" />
+    </application>
+
+</manifest>
