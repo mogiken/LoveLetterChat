@@ -16,11 +16,11 @@ public final class ApplicationConst {
 	//public static final String SENDER_ID = "1012419078893";
 	public static final String SENDER_ID = "146316056050";
 	// TODO:FACEBOOK_APP_IDはFacebookDevelopersでアプリケーションを作成した際に発行された値に書き換えてください。
-	public static final String FACEBOOK_APP_ID = "699038683441923";
+	//public static final String FACEBOOK_APP_ID = "699038683441923";
 	// TODO:AGGREGATION_RULE_IDは開発者ポータルでAggregation Ruleを作成した際に発行された値に書き換えてください。
 	public static final String AGGREGATION_RULE_ID = "87";
     // TODO: STAMP_BUTTON_ABTEST_IDは開発者ポータルでA/Bテストを作成した際に発行された値に書き換えてください。
-	public static final String ABTEST_ID = "b5388890-098c-11e4-8ad5-12314307e197";
+	//public static final String ABTEST_ID = "b5388890-098c-11e4-8ad5-12314307e197";
 	
 	/**
 	 * 全てのチャットユーザが自分用に保持しているTOPICの名前です。

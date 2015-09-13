@@ -2,27 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/Users/mogi/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.3.0/1b355f73402020c5a0dcca58affc3ec3dfeabac1/okio-1.3.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1b355f73402020c5a0dcca58affc3ec3dfeabac1">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/okio-1.3.0-31217201292d8a1bd60cb49a571460d94124fdc4.jar" />
-    </item>
-    <item
-        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.example.library/android-cloud-sdk-v2.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f7d432f6801bd785bec509039b27e27131636802">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/classes-b0ea4ea18bfb27141d0d70f54436450ddf967c59.jar" />
-    </item>
-    <item
-        jar="/Users/mogi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-apache/2.3.0/f7e3311a6a82377e270bf327fed8dd5c95dd439/okhttp-apache-2.3.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0f7e3311a6a82377e270bf327fed8dd5c95dd439">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/okhttp-apache-2.3.0-b63ac563e8a6ce136dd518c19348ea26650c212d.jar" />
-    </item>
-    <item
         jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -30,25 +9,11 @@
         <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/classes-6f3e5c9ddcafc8fea2ca8ae37f4640e09b9c419f.jar" />
     </item>
     <item
-        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-676df5cabd4fd42255a550bd46ed7125e9bfcf2d.jar" />
-    </item>
-    <item
-        jar="/Applications/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fa100554894d48afbb0ad0851f92cc333d0a6051.jar" />
-    </item>
-    <item
-        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/libs/commons-io-2.4.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/commons-io-2.4-5d8e57fae24da3cc44eef1355961912c27c0dc4a.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/classes-c02ad411dc5a0f1516268eae64577b9a1b8e0041.jar" />
     </item>
     <item
         jar="/Users/mogi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.3.0/2e7bc7033dc2c8423e661224171b3133fb155b28/okhttp-2.3.0.jar"
@@ -65,11 +30,46 @@
         <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/google-play-services-a7d8ccae55a0342db73b5f36933f1925f7d2c1a7.jar" />
     </item>
     <item
-        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jar="/Users/mogi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-apache/2.3.0/f7e3311a6a82377e270bf327fed8dd5c95dd439/okhttp-apache-2.3.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/classes-c02ad411dc5a0f1516268eae64577b9a1b8e0041.jar" />
+        sha1="0f7e3311a6a82377e270bf327fed8dd5c95dd439">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/okhttp-apache-2.3.0-b63ac563e8a6ce136dd518c19348ea26650c212d.jar" />
+    </item>
+    <item
+        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/commons-io-2.4-5d8e57fae24da3cc44eef1355961912c27c0dc4a.jar" />
+    </item>
+    <item
+        jar="/Users/mogi/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.3.0/1b355f73402020c5a0dcca58affc3ec3dfeabac1/okio-1.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1b355f73402020c5a0dcca58affc3ec3dfeabac1">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/okio-1.3.0-31217201292d8a1bd60cb49a571460d94124fdc4.jar" />
+    </item>
+    <item
+        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-676df5cabd4fd42255a550bd46ed7125e9bfcf2d.jar" />
+    </item>
+    <item
+        jar="/Applications/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-fa100554894d48afbb0ad0851f92cc333d0a6051.jar" />
+    </item>
+    <item
+        jar="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/exploded-aar/com.example.library/android-cloud-sdk-v2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f7d432f6801bd785bec509039b27e27131636802">
+        <dex dex="/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/build/intermediates/pre-dexed/debug/classes-b0ea4ea18bfb27141d0d70f54436450ddf967c59.jar" />
     </item>
 
 </items>

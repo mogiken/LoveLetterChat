@@ -17,7 +17,8 @@ public abstract class ABTestInfoFetchTask extends AsyncTask<Void, Void, KiiExper
     protected KiiExperiment doInBackground(Void... params) {
         KiiExperiment experiment = null;
         try {
-            experiment = KiiExperiment.getByID(ApplicationConst.ABTEST_ID);
+            //もぎ未使用
+            //experiment = KiiExperiment.getByID(ApplicationConst.ABTEST_ID);
         } catch (Exception e) {
             Logger.e("Fetching A/B test info is failed.", e);
         }

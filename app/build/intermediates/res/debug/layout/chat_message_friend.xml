@@ -18,5 +18,12 @@
 		android:background="@drawable/chat_bubble_friend"
 		android:layout_alignParentLeft="true"
 		android:singleLine="false"/>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/row_emotion_image"
+		android:layout_below="@id/row_message"
+		/>
+
 </RelativeLayout>
 <!-- From: file:/Users/mogi/Documents/業務/テクノ/ラブレター/LoveLetterChat/app/src/main/res/layout/chat_message_friend.xml -->

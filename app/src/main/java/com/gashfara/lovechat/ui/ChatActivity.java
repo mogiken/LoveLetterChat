@@ -166,7 +166,12 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 							HttpResponse httpResponse = httpClient.execute(httpGet);
 							String str = EntityUtils.toString(httpResponse.getEntity(), "UTF-8");
 							JSONObject myJson =  new JSONObject(str);//Jsonに変換
-							String emotion = "likedislike:" + myJson.getString("likedislike") + ",joysad:" + myJson.getString("joysad")+",angerfear:" + myJson.getString("angerfear");
+							//emotionのJSONを作成
+							JSONObject emotionJson = new JSONObject();
+							emotionJson.put("likedislike", myJson.getString("likedislike"));
+							emotionJson.put("joysad", myJson.getString("joysad"));
+							emotionJson.put("angerfear", myJson.getString("angerfear"));
+							String emotion = emotionJson.toString();
 							Log.d("HTTP", emotion +" json=" +str);
 							// 入力されたメッセージをバックグラウンドでKiiCloudに保存する
 							final ChatMessage message = new ChatMessage(kiiGroup);
@@ -263,6 +268,8 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 	private static class ViewHolder {
 		TextView message;
 		ImageView stamp;
+		ImageView emotion;
+
 	}
 	/**
 	 * {@link ChatMessage}をリストビューに表示するためのアダプターです。
@@ -309,9 +316,11 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 				if (chatMessage.isStamp()) {
 					holder.message = null;
 					holder.stamp = (ImageView)convertView.findViewById(R.id.row_stamp);
+					holder.emotion=null;
 				} else {
 					holder.message = (TextView)convertView.findViewById(R.id.row_message);
 					holder.stamp = null;
+					holder.emotion=(ImageView)convertView.findViewById(R.id.row_emotion_image);
 				}
 				convertView.setTag(holder);
 			} else {
@@ -326,7 +335,19 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 				String message = chatMessage.getMessage() == null ? "" : chatMessage.getMessage();
 				String emotion = chatMessage.getEmotion() == null ? "" : chatMessage.getEmotion();
 				//相手の時だけ感情を表示
-				if(getRowType(chatMessage) == ROW_FRIEND_MESSAGE){message += " "+emotion;}
+				if(getRowType(chatMessage) == ROW_FRIEND_MESSAGE){
+					message += " "+emotion;
+					//怒ってる時スタンプ表示.とりあえず
+					try {
+						JSONObject myJson = new JSONObject(emotion);
+						int angerfear = myJson.getInt("angerfear");
+						if (angerfear >= 2) {
+							holder.emotion.setImageResource(R.drawable.stamp_oko);
+						}
+					}catch(Exception e){
+					}
+
+				}
 				holder.message.setText(message);
 			}
 			return convertView;
