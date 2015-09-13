@@ -23,6 +23,7 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/row_emotion_image"
 		android:layout_below="@id/row_message"
+		android:visibility="gone"
 		/>
 
 </RelativeLayout>

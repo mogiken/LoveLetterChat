@@ -291,7 +291,7 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 		}
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			ViewHolder holder;
+			final ViewHolder holder;
 			ChatMessage chatMessage = this.getItem(position);
 			if (convertView == null) {
 				switch (getRowType(chatMessage)) {
@@ -321,6 +321,20 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 					holder.message = (TextView)convertView.findViewById(R.id.row_message);
 					holder.stamp = null;
 					holder.emotion=(ImageView)convertView.findViewById(R.id.row_emotion_image);
+					//フレンドメッセージの時
+					if(getRowType(chatMessage)==ROW_FRIEND_MESSAGE) {
+						holder.message.setOnClickListener(new OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								//メッセージをタップしたら感情を非表示・表示切り替える。
+								if (holder.emotion.getVisibility() == View.VISIBLE)
+									holder.emotion.setVisibility(View.GONE);
+								else
+									holder.emotion.setVisibility(View.VISIBLE);
+
+							}
+						});
+					}
 				}
 				convertView.setTag(holder);
 			} else {
@@ -336,16 +350,17 @@ public class ChatActivity extends ActionBarActivity implements OnSelectStampList
 				String emotion = chatMessage.getEmotion() == null ? "" : chatMessage.getEmotion();
 				//相手の時だけ感情を表示
 				if(getRowType(chatMessage) == ROW_FRIEND_MESSAGE){
-					message += " "+emotion;
 					//怒ってる時スタンプ表示.とりあえず
 					try {
 						JSONObject myJson = new JSONObject(emotion);
 						int angerfear = myJson.getInt("angerfear");
 						if (angerfear >= 2) {
 							holder.emotion.setImageResource(R.drawable.stamp_oko);
+							message += "♪";
 						}
 					}catch(Exception e){
 					}
+					message += " "+emotion;
 
 				}
 				holder.message.setText(message);
